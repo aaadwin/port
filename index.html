@@ -3,25 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/dist/css/bootstrap.min.css" rel="stylesheet">
-</head>
-<body class="bg-light text-dark">
+    <title>Portfolio - Mirmid</title>
+    
+    <style>
+        /* Reset dasar agar tidak ada margin bawaan browser */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        body {
+            background-color: #f8f9fa;
+            color: #212529;
+        }
+
+        /* CONTAINER UTAMA (Biar konten gak mepet ke pinggir layar) */
+        .container {
+            width: 100%;
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* STYLE NAVBAR (NAVIGASI) */
+        .navbar {
+            background-color: #212529;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        /* Menggunakan Flexbox agar Mirmid di kiri, menu di kanan */
+        .navbar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar-brand {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.25rem;
+        }
+
+        .navbar-nav {
+            display: flex;
+            list-style: none;
+            gap: 20px; /* Jarak antar menu */
+        }
+
+        .nav-link {
+            color: #rgba(255,255,255,0.75);
+            color: #b5b5b5;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: color 0.2s;
+        }
+
+        .nav-link:hover, .nav-link.active {
+            color: #ffffff; /* Warna putih cerah saat di-hover atau aktif */
+        }
+
+        /* RESPONSIVE: Gaya khusus kalau dibuka di HP (Layar di bawah 768px) */
+        @media (max-width: 768px) {
+            .navbar .container {
+                flex-direction: column; /* Menu pindah ke bawah nama Mirmid */
+                gap: 15px;
+            }
+            .navbar-nav {
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="#">Mirmid</a>
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Portfolio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
-                </ul>
-            </div>
+            <a class="navbar-brand" href="#">Mirmid</a>
+            
+            <ul class="navbar-nav">
+                <li><a class="nav-link active" href="#">Home</a></li>
+                <li><a class="nav-link" href="#">About</a></li>
+                <li><a class="nav-link" href="#">Portfolio</a></li>
+                <li><a class="nav-link" href="#">Contact</a></li>
+            </ul>
         </div>
     </nav>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
